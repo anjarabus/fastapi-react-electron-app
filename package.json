@@ -1,0 +1,25 @@
+{
+  "name": "calculator-app",
+  "version": "1.0.0",
+  "main": "./electron/main.js",
+  "homepage": "./",
+  "scripts": {
+    "py-install": "pip install -r backend/requirements.txt",
+    "py-build": "pyinstaller --workpath=/build --distpath=/dist api.spec",
+    "electron-dev": "electron .",
+    "electron-build": "electron-builder --config electron/electron-builder.config.json"
+  },
+  "author": "",
+  "license": "ISC",
+  "description": "",
+  "devDependencies": {
+    "axios": "^1.7.7",
+    "electron": "^33.2.0",
+    "electron-builder": "^25.1.8",
+    "electron-reloader": "^1.2.1"
+  },
+  "dependencies": {
+    "axios": "^1.7.7",
+    "electron-is-dev": "^3.0.1"
+  }
+}

@@ -1,0 +1,7 @@
+// .babelrc
+{
+  "presets": [
+    "@babel/preset-env", // Allows you to use modern JavaScript features
+    "@babel/preset-react" // Allows you to use JSX
+  ]
+}

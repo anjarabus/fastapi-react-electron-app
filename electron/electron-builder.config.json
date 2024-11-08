@@ -1,0 +1,15 @@
+{
+  "appId": "com.company.app-name",
+  "productName": "audio-splicing-app",
+  "copyright": "Copyright © year ${author}",
+
+  "extraFiles": {
+    "from": "python/dist/",
+    "to": "lib/",
+    "filter": ["**/**"]
+  },
+
+  "directories": {
+    "output": "dist"
+  }
+}
