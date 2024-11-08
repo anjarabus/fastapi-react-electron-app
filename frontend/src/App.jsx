@@ -2,6 +2,9 @@
 
 import React, { useState } from "react";
 import axios from "axios";
+import "./style.css";
+import yellowPaw from "../public/paw-big-yellow2.svg";
+import weaselImg from "../public/weasel-right.svg";
 
 const App = () => {
   const [name, setName] = useState("");
@@ -19,33 +22,39 @@ const App = () => {
     }
   };
 
+  const gridItems = new Array(100).fill(null);
   return (
     <div>
-      <h1>Hello, React with Electron!</h1>
-
-      <input
-        type="text"
-        value={name}
-        onChange={(e) => setName(e.target.value)}
-        placeholder="Enter your name"
-      />
-      <button onClick={fetchHelloMessage}>Get Greeting</button>
-
-      <p>{message}</p>
+      <h1 className="title">Calculator App</h1>
+      <img className="weasel weasel-right" src={weaselImg} />
+      <img className="weasel weasel-left" src={weaselImg} />
+      <div className="grid-container">
+        {gridItems.map((_, index) => {
+          return (
+            <div className="grid-item" key={index}>
+              {index == 3 ? (
+                <input
+                  type="text"
+                  value={name}
+                  onChange={(e) => setName(e.target.value)}
+                  placeholder="Enter your name"
+                />
+              ) : index == 4 ? (
+                <button onClick={fetchHelloMessage}>Get Greeting</button>
+              ) : index == 5 ? (
+                <p>{message}</p>
+              ) : (
+                index + 1
+                // ""
+              )}{" "}
+            </div>
+          );
+        })}
+        {/* <img className="weasel weasel-right" src={weaselImg} />
+        <img className="weasel weasel-left" src={weaselImg} /> */}
+      </div>
     </div>
   );
 };
 
 export default App;
-
-// import React, { useState } from "react";
-
-// const App = () => {
-//   return (
-//     <div>
-//       <h1>Hello, React with Electron!</h1>
-//     </div>
-//   );
-// };
-
-// export default App;

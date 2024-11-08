@@ -23,6 +23,11 @@ module.exports = {
         test: /\.css$/, // Match CSS files
         use: ["style-loader", "css-loader"], // Inject CSS into the DOM and process CSS
       },
+      // Handle SVG files
+      {
+        test: /\.svg$/,
+        type: "asset/resource", // This will handle .svg files as separate assets
+      },
     ],
   },
   resolve: {

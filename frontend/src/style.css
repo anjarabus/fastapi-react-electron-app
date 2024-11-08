@@ -1,0 +1,49 @@
+/* style.css */
+body {
+  background-color: pink;
+  color: white;
+  margin: 0;
+  padding: 0;
+}
+
+.title {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+}
+
+.grid-container {
+  display: grid;
+  position: relative;
+  grid-template-columns: repeat(10, 1fr);
+  grid-template-rows: repeat(10, 1fr);
+  height: 80vh;
+}
+
+.grid-item {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  font-size: 1em;
+}
+
+.weasel {
+  position: absolute;
+  z-index: -1;
+  width: 10%;
+  height: 10%;
+}
+
+.weasel.weasel-right {
+  top: 0;
+  left: 10%;
+  transform: scaleX(1); /* Flip vertically */
+}
+
+.weasel.weasel-left {
+  top: 0;
+  left: 20%;
+  transform: scaleX(-1); /* Flip vertically */
+}
