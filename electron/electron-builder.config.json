@@ -1,6 +1,6 @@
 {
   "appId": "com.company.app-name",
-  "productName": "audio-splicing-app",
+  "productName": "calculator-app",
   "copyright": "Copyright © year ${author}",
 
   "extraFiles": {
