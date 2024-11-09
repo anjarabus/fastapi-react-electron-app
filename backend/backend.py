@@ -18,10 +18,18 @@ app.add_middleware(
     allow_headers=["*"],  # Allow all headers
 )
 
-@app.get("/add/{number1}/{number2}")
-def add_numbers(number1: int, number2: int):
-    return {"sum": number1 + number2}
+@app.get("/op/{number1}/{number2}")
+def operations(number1: int, number2: int):
+    divide_result = "NaN"
 
+    if number2 != 0:
+        divide_result = number1 / number2
+    return {
+        "sum": number1 + number2,
+        "diff": number1 - number2,
+        "prod": number1 * number2,
+        "div": divide_result
+    }
 
 if __name__ == "__main__":
     import asyncio
