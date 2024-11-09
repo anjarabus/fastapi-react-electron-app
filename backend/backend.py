@@ -18,10 +18,10 @@ app.add_middleware(
     allow_headers=["*"],  # Allow all headers
 )
 
-@app.get("/hello/{name}")
-def read_root(name: str):
-    message =  f"hello {name}"
-    return JSONResponse(content={"message": message})
+@app.get("/add/{number1}/{number2}")
+def add_numbers(number1: int, number2: int):
+    return {"sum": number1 + number2}
+
 
 if __name__ == "__main__":
     import asyncio

@@ -16,8 +16,8 @@ body {
 .grid-container {
   display: grid;
   position: relative;
-  grid-template-columns: repeat(10, 1fr);
-  grid-template-rows: repeat(10, 1fr);
+  grid-template-columns: repeat(9, 1fr);
+  grid-template-rows: repeat(9, 1fr);
   height: 80vh;
 }
 
@@ -29,21 +29,32 @@ body {
   font-size: 1em;
 }
 
+.input {
+  width: 50px;
+  font-size: 30px;
+  border: none;
+  color: pink;
+}
+
+.output {
+  width: 50px;
+  font-size: 30px;
+}
+
+.signs {
+  font-size: 30px;
+}
+
+.button {
+  background-color: transparent;
+  border: transparent;
+  color: white;
+  cursor: url("../public/paw-icon.svg"), auto;
+}
+
 .weasel {
-  position: absolute;
-  z-index: -1;
-  width: 10%;
-  height: 10%;
-}
-
-.weasel.weasel-right {
-  top: 0;
-  left: 10%;
-  transform: scaleX(1); /* Flip vertically */
-}
-
-.weasel.weasel-left {
-  top: 0;
-  left: 20%;
-  transform: scaleX(-1); /* Flip vertically */
+  /* position: absolute;
+  z-index: -1; */
+  width: 70%;
+  height: 70%;
 }
