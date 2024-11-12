@@ -52,7 +52,8 @@ Bundle back-end from `root` directory:
    cd ..
    npm run py-build
 ```
-   
+4. Make sure app is in development mode by changing `isDev=false > isDev=true` in `electron/main.js`<br/>
+
 5. Build the Electron app:<br/>
 ```
    npm run electron-build
