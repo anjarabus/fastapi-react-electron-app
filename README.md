@@ -13,7 +13,7 @@ In this project, I use electronJS to build a simple desktop calculator app which
    `cd frontend/`<br/> 
    `npm run build`
 3. Use PyInstaller to compile Python back-end into a standalone executable:<br/>
-   Activate virtual environment or install PyInstaller globally using `pip install pyinstaller` <br/>
+   `source desktop/bin/activate` OR install pyinstaller globally `pip install pyinstaller` <br/>
    `cd ..`(back to root directory) <br/>
    `npm run py-build`
 5. Build the Electron app:<br/>
