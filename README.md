@@ -3,7 +3,7 @@ In this project, I use electronJS to build a desktop app which has a simple Reac
 ## Steps to build the app on your computer: 
 (MacOS only: for windows you will need to make some changes to your configuration first)
 
-1. Build the React front-end:
+1. Build the React front-end:<br/> 
    `cd frontend/`<br/> 
    `npm run build`
 3. 
