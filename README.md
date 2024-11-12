@@ -6,7 +6,7 @@ In this project, I use electronJS to build a simple desktop calculator app which
 
 <pre>
    root/ 
-      |-- backend/ 
+      |-- backend/ $${\color{red}Red}$$
           |-- backend.py
           |-- api.spec
       |-- electron/
