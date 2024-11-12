@@ -66,6 +66,7 @@ In this project, I use electronJS to build a simple desktop calculator app which
    cd frontend
    npm run build
    ```
+   Should create folder `frontend/build/`
    
 3. Use PyInstaller to bundle Python back-end (scripts + dependencies) into a standalone executable:<br/>
 Activate `desktop_env` with
@@ -81,6 +82,7 @@ Bundle back-end from `root` directory:
    cd ..
    npm run py-build
 ```
+Should create folders `backend/dist` and `backend/build`
 
 4. Make sure app is in production mode by changing `isDev=true` to `isDev=false` in `electron/main.js`<br/>
 
@@ -89,6 +91,7 @@ Bundle back-end from `root` directory:
 ```
    npm run electron-build
 ```
+Should create folder `dist/`
 
 ## Things to watch out for: 
 
