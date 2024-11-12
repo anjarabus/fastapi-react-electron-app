@@ -1,0 +1,23 @@
+{
+  "appId": "com.company.app-name",
+  "productName": "calculator-app",
+  "copyright": "Copyright © 2024 Lorne",
+
+  "mac": {
+    "icon": "electron/resources/heart-icon.icns"
+  },
+
+  "files": [
+    "electron/main.js",
+    "frontend/build/**/*",
+    "backend/dist/**/*",
+    "node_modules/**/*"
+  ],
+
+  "directories": {
+    "output": "dist"
+  },
+
+  "asar": false,
+  "extends": null
+}

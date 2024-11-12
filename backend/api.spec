@@ -1,16 +1,15 @@
 # api.spec tells PyInstaller what files and settings to use for the build configuration 
-# PyInstaller packages the python application (.py scripts and requirements.txt) into a stand-alone executable
+# PyInstaller packages the python application (.py scripts and dependencies) into a stand-alone executable
 
 # -*- mode: python ; coding: utf-8 -*-
 
 block_cipher = None
 
 a = Analysis(
-    ['python/backend.py'],  # Main Python script to be packaged
+    ['backend.py'],  # Main Python script to be packaged
     pathex=[],  # List any additional directories you want PyInstaller to look in
     binaries=[],
-    datas=[('public/mic.icns', '.'),  # Ensure you provide a macOS-compatible icon (e.g., .icns)
-           ],
+
     hiddenimports=[  # Hidden imports, if any
         "uvicorn.logging",
         "uvicorn.lifespan.off",
@@ -50,9 +49,9 @@ exe = EXE(
     debug=False,
     bootloader_ignore_signals=False,
     strip=False,
-    upx=True,
+    upx=True, # Compress executable - try with or without: setting true could make file smaller but cause issues
     console=True,  # Set to False if you want a GUI app (no terminal window)
-    icon='public/mic.icns'  # For macOS, use a .icns icon (not .ico)
+    icon='../electron/resources/heart-icon.icns'  # For macOS, use a .icns icon (not .ico)
 )
 
 coll = COLLECT(

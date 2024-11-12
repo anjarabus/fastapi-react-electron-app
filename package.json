@@ -5,9 +5,9 @@
   "homepage": "./",
   "scripts": {
     "py-install": "pip install -r backend/requirements.txt",
-    "py-build": "pyinstaller --workpath=/build --distpath=/dist api.spec",
+    "py-build": "pyinstaller --workpath=./backend/build --distpath=./backend/dist backend/api.spec",
     "electron-dev": "electron .",
-    "electron-build": "electron-builder --config electron/electron-builder.config.json"
+    "electron-build": "electron-builder --config electron-builder.config.json"
   },
   "author": "",
   "license": "ISC",

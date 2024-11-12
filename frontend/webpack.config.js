@@ -4,7 +4,7 @@ const HtmlWebpackPlugin = require("html-webpack-plugin");
 module.exports = {
   entry: "./src/index.js", // Entry point for the React app
   output: {
-    path: path.resolve(__dirname, "dist"), // Output folder for the production build
+    path: path.resolve(__dirname, "build"), // Output folder for the production build
     filename: "bundle.js", // Output file
   },
   module: {

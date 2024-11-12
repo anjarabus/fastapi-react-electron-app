@@ -1,3 +1,8 @@
 node_modules/
 frontend/node_modules/
+frontend/build/
 desktop_env/
+backend/build/
+backend/dist/
+dist/
+

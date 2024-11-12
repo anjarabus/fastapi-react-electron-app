@@ -5,54 +5,38 @@ const { app, BrowserWindow } = require("electron");
 const path = require("path");
 const fs = require("fs");
 // const isDev = import("electron-is-dev");
-const isDev = true;
+const isDev = false;
 const { spawn } = require("child_process");
 const execFile = require("child_process").execFile;
-// const API_PROD_PATH = path.join(process.resourcesPath, "../lib/api/api.exe");
-const API_PROD_PATH = path.join(process.resourcesPath, "../lib/api/api.app"); //.exe is windows only, use .app for macOS
-const API_DEV_PATH = path.join(__dirname, "../backend/backend.py");
-const INDEX_PATH = path.join(__dirname, "../frontend/public/index.html");
 const app_instance = app.requestSingleInstanceLock();
 
-let pythonProcess = null;
+let pythonExecutable;
 
 if (isDev) {
-  const pythonExecutable = "/opt/miniconda3/bin/python";
+  pythonExecutable = "/opt/miniconda3/bin/python"; //Dev mode: load python from local
   console.log(`Using Python executable: ${pythonExecutable}`);
-
-  pythonProcess = spawn(pythonExecutable, [API_DEV_PATH]);
-
-  // Spawn the Python process with the correct command
-  // const pythonProcess = spawn(
-  //   pythonExecutable,
-  //   [
-  //     "-m",
-  //     "uvicorn",
-  //     "backend.backend:app",
-  //     "--host",
-  //     "127.0.0.1",
-  //     "--port",
-  //     "8000",
-  //   ],
-  //   {
-  //     cwd: path.join(__dirname, ".."), // Set the working directory to the project root
-  //   }
-  // );
-
-  // Log the stdout to the console
-  pythonProcess.stdout.on("data", (data) => {
-    console.log(`stdout: ${data.toString()}`);
-  });
-
-  // Log stderr (this will show any errors from the Python process)
-  pythonProcess.stderr.on("data", (data) => {
-    console.error(`stderr: ${data.toString()}`);
-  });
-
-  pythonProcess.on("close", (code) => {
-    console.log(`Python process exited with code ${code}`);
-  });
+} else {
+  pythonExecutable = path.join(__dirname, "../backend/dist/api", "api"); //Prod mode: load python bundle created with pyinstaller
+  console.log(`Using Python executable: ${pythonExecutable}`);
 }
+
+const pythonProcess = spawn(pythonExecutable, [
+  path.join(__dirname, "../backend/backend.py"),
+]);
+
+// Log the stdout to the console
+pythonProcess.stdout.on("data", (data) => {
+  console.log(`stdout: ${data.toString()}`);
+});
+
+// Log stderr (this will show any errors from the Python process)
+pythonProcess.stderr.on("data", (data) => {
+  console.error(`stderr: ${data.toString()}`);
+});
+
+pythonProcess.on("close", (code) => {
+  console.log(`Python process exited with code ${code}`);
+});
 
 function createWindow() {
   const mainWindow = new BrowserWindow({
@@ -70,7 +54,9 @@ function createWindow() {
     mainWindow.loadURL("http://localhost:8080"); // Dev mode: Load React app from Webpack Dev Server
     mainWindow.webContents.openDevTools();
   } else {
-    mainWindow.loadFile(path.join(__dirname, "frontend/dist", "index.html")); // Prod mode: Load from production build
+    mainWindow.loadFile(
+      path.join(__dirname, "../frontend/build", "index.html")
+    ); // Prod mode: Load from production build
   }
 
   // only one instance exists
