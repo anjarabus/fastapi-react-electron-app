@@ -8,15 +8,15 @@ In this project, I use electronJS to build a simple desktop calculator app which
    root/ 
       |-- backend/ 
           |-- backend.py           <em>Python back-end script</em>
-          |-- api.spec             <em>Configuration needed for PyInstaller</em>
+          |-- api.spec           <em>Configuration needed for PyInstaller</em>
       |-- electron/
-          |-- main.js             <em>ElectronJS and back-end entry-point</em>
+          |-- main.js           <em>ElectronJS and back-end entry-point</em>
           |-- preload.js   
-          |-- resources/            <em>Contains the app logo in .icns format for MacOS (change to.ico for Windows) </em>
+          |-- resources/           <em>Contains the app logo in .icns format for MacOS (change to.ico for Windows) </em>
       |-- frontend/
           |-- public/
-              |-- index.html        <em>Front-end entry-point in dev mode</em>
-               ...                  <em>Any images (svg) used in the front-end</em>
+              |-- index.html          <em>Front-end entry-point in dev mode</em>
+               ...                <em>Any images (svg) used in the front-end</em>
           |-- src/
               |-- App.jsx           <em>React front-end script</em>
               |-- index.js
