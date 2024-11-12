@@ -12,7 +12,7 @@ In this project, I use electronJS to build a simple desktop calculator app which
       |-- electron/
           |-- main.js           <em>Entry-point for ElectronJS (makes desktop window) and FastAPI back-end (spawns python process)</em>
           |-- preload.js   
-          |-- resources/           <em>Contains the app logo in .icns format for MacOS (change to.ico for Windows) </em>
+          |-- resources/           <em>Contains the app logo in .icns format for MacOS (change to .ico for Windows) </em>
       |-- frontend/
           |-- public/
               |-- index.html          <em>Entry-point for React front-end in dev mode</em>
