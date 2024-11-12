@@ -18,7 +18,7 @@ In this project, I use electronJS to build a simple desktop calculator app which
    `npm start`<br/>
    
 5. Start the Python back-end:
-6. 
+
    `cd ..` (back to root directory)<br/>
    `npm run electron-dev`
    
