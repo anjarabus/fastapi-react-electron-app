@@ -8,16 +8,16 @@ In this project, I use electronJS to build a simple desktop calculator app which
    root/ 
       |-- backend/ 
           |-- backend.py    <em>python back-end script<em/>
-          |-- api.spec      _configuration needed for PyInstaller_
+          |-- api.spec      <em>configuration needed for PyInstaller<em/>
       |-- electron/
-          |-- main.js       _electronJS entry-point_
+          |-- main.js       <em>electronJS entry-point<em/>
           |-- preload.js   
           |-- resources/
       |-- frontend/
           |-- public/
-              |-- index.html   _frontend entry-point in dev mode_
+              |-- index.html   <em>frontend entry-point in dev mode<em/>
           |-- src/
-              |-- App.jsx      _React front-end script_
+              |-- App.jsx      <em>React front-end script</em>
               |-- index.js
               |-- style.css
           |-- package.json
