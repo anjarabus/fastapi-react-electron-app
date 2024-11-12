@@ -1,6 +1,6 @@
 # FastAPI-React Desktop App with ElectronJS 
 
-In this project, I use electronJS to build a desktop app which has a simple React front-end and Python (FastAPI) back-end. 
+In this project, I use electronJS to build a simple desktop calculator app which has a React front-end and Python (FastAPI) back-end. 
 
 ## Explanation of files: 
 
@@ -13,6 +13,7 @@ In this project, I use electronJS to build a desktop app which has a simple Reac
    `cd frontend/`<br/> 
    `npm run build`
 3. Use PyInstaller to compile Python back-end into a standalone executable:<br/>
+   Activate virtual environment or install PyInstaller globally using `pip install pyinstaller` <br/>
    `cd ..`(back to root directory) <br/>
    `npm run py-build`
 5. Build the Electron app:<br/>
