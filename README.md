@@ -25,7 +25,7 @@ In this project, I use electronJS to build a simple desktop calculator app which
           |-- webpack.config.js
           |-- .babelrc
        |-- electron-builder.config.json      <em>Configuration for electron-builder</em>
-       |-- package.json
+       |-- package.json            <em>ElectronJS dependencies; scripts to install python requirements (py-install), bundle back-end (py-build), run electron in dev mode (electron-dev) and build electron app (electron-build </em>
        |-- requirements.txt      <em>Python packages to install (preferrably in a venv) </em> 
 </pre>
 
