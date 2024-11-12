@@ -7,10 +7,10 @@ In this project, I use electronJS to build a simple desktop calculator app which
 <pre>
    root/ 
       |-- backend/ 
-          |-- backend.py             <em>Python back-end script</em>
-          |-- api.spec               <em>Configuration needed for PyInstaller</em>
+          |-- backend.py           <em>Python back-end script</em>
+          |-- api.spec             <em>Configuration needed for PyInstaller</em>
       |-- electron/
-          |-- main.js                <em>ElectronJS entry-point</em>
+          |-- main.js             <em>ElectronJS entry-point</em>
           |-- preload.js   
           |-- resources/            <em>Contains the app logo in .icns format for MacOS (change to.ico for Windows) </em>
       |-- frontend/
@@ -21,7 +21,7 @@ In this project, I use electronJS to build a simple desktop calculator app which
               |-- App.jsx           <em>React front-end script</em>
               |-- index.js
               |-- style.css    
-          |-- package.json
+          |-- package.json            <em>React dependencies; scripts: start, build</em>
           |-- webpack.config.js
           |-- .babelrc
        |-- requirements.txt                <em>Python packages to install (preferrably in a venv) </em> 
