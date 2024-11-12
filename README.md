@@ -10,7 +10,7 @@ In this project, I use electronJS to build a simple desktop calculator app which
           |-- backend.py           <em>Python back-end script</em>
           |-- api.spec             <em>Configuration needed for PyInstaller</em>
       |-- electron/
-          |-- main.js             <em>ElectronJS entry-point</em>
+          |-- main.js             <em>ElectronJS and back-end entry-point</em>
           |-- preload.js   
           |-- resources/            <em>Contains the app logo in .icns format for MacOS (change to.ico for Windows) </em>
       |-- frontend/
