@@ -16,30 +16,41 @@ In this project, I use electronJS to build a simple desktop calculator app which
 2. Make sure app is in development mode by changing `isDev=false > isDev=true` in `electron/main.js`<br/>
    (Only because `electron-is-dev` package was not working correctly for me so I resorted to changing `isDev` manually.)
    
-4. Start the React front-end:<br/>
-
-   `cd frontend`<br/>
-   `npm start`<br/>
+4. Start the React front-end from `frontend/` directory:<br/>
+```
+   cd frontend
+   npm start
+```
    
-5. Start the Python back-end:
-
-   `cd ..` (back to root directory)<br/>
-   `npm run electron-dev`
+5. Start the Python back-end from `root` directory:
+```
+   cd ..
+   npm run electron-dev
+```
    
 
 ## Steps to build and execute app in production mode: 
 (MacOS only: for windows you will need to make some changes to your configuration first)
 
 1. Build the React front-end:<br/>
-   
-   `cd frontend`<br/> 
-   `npm run build`
+   ```
+   cd frontend
+   npm run build
+   ```
    
 3. Use PyInstaller to compile Python back-end into a standalone executable:<br/>
-
-   `source desktop_env/bin/activate` OR install pyinstaller globally `pip install pyinstaller` <br/>
-   `cd ..` (back to root directory) <br/>
-   `npm run py-build`
+Activate `desktop_env` with
+```
+   source desktop_env/bin/activate
+```
+ OR install pyinstaller globally using
+ ```
+ pip install pyinstaller
+```
+```
+   cd ..
+   npm run py-build
+```
    
 5. Build the Electron app:<br/>
 
