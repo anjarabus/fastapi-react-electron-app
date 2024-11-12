@@ -6,10 +6,10 @@ In this project, I use electronJS to build a simple desktop calculator app which
 
 <pre>
    root <br/>
-      |-- backend <br/>
-      |   |-- backend.py <br/>
-      |-- frontend <br/>
-      |   |-- src <br/>
+      |-- backend 
+      |   |-- backend.py
+      |-- frontend
+      |   |-- src
 </pre>
 
   
