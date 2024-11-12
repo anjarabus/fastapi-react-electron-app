@@ -4,11 +4,11 @@ In this project, I use electronJS to build a simple desktop calculator app which
 
 ## Explanation of files: 
 
-root
-   |-- backend
-   |   |-- backend.py
-   |-- frontend
-   |   |-- src
+root <br/>
+   |-- backend <br/>
+   |   |-- backend.py <br/>
+   |-- frontend <br/>
+   |   |-- src <br/>
   
 
 
