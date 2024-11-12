@@ -13,7 +13,7 @@ In this project, I use electronJS to build a simple desktop calculator app which
    pip install -r requirements.txt
 ```
 
-2. Make sure app is in development mode by changing `isDev=false > isDev=true` in `electron/main.js`<br/>
+2. Make sure app is in development mode by changing `isDev=false` to `isDev=true` in `electron/main.js`<br/>
    (Only because `electron-is-dev` package was not working correctly for me so I resorted to changing `isDev` manually.)
    
 4. Start the React front-end from `frontend/` directory:<br/>
@@ -53,7 +53,7 @@ Bundle back-end from `root` directory:
    npm run py-build
 ```
 
-4. Make sure app is in production mode by changing `isDev=true > isDev=false` in `electron/main.js`<br/>
+4. Make sure app is in production mode by changing `isDev=true` to `isDev=false` in `electron/main.js`<br/>
 
 
 5. Build the Electron app:<br/>
