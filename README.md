@@ -7,7 +7,6 @@ In this project, I use electronJS to build a simple desktop calculator app which
 $ ./tree-md .
 # Project tree
 
-.
  * tree-md
  * dir2
    * file21.ext
