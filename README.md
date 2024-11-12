@@ -14,6 +14,7 @@ In this project, I use electronJS to build a simple desktop calculator app which
 3. Start the React front-end:<br/>
    `cd frontend`<br/>
    `npm start`<br/>
+   
 5. Start the Python back-end:
    `cd ..` (back to root directory)<br/>
    `npm run electron-dev`
@@ -25,10 +26,12 @@ In this project, I use electronJS to build a simple desktop calculator app which
 1. Build the React front-end:<br/> 
    `cd frontend`<br/> 
    `npm run build`
+   
 3. Use PyInstaller to compile Python back-end into a standalone executable:<br/>
    `source desktop_env/bin/activate` OR install pyinstaller globally `pip install pyinstaller` <br/>
    `cd ..` (back to root directory) <br/>
    `npm run py-build`
+   
 5. Build the Electron app:<br/>
    `npm run electron-build`
 
