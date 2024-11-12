@@ -7,10 +7,11 @@ In this project, I use electronJS to build a simple desktop calculator app which
 ## How to run the app in development mode: 
 
 1. Make and activate a `venv`, then install requirements: <br/>
-
-   `python -m venv desktop_env` <br/>
-   `source desktop_env/bin/activate` <br/>
-   `pip install -r requirements.txt`
+```
+   python -m venv desktop_env <br/>
+   source desktop_env/bin/activate
+   pip install -r requirements.txt
+```
 
 2. Make sure app is in development mode by changing `isDev=false > isDev=true` in `electron/main.js`<br/>
    (Only because `electron-is-dev` package was not working correctly for me so I resorted to changing `isDev` manually.)
