@@ -7,7 +7,7 @@ In this project, I use electronJS to build a simple desktop calculator app which
 <pre>
    root/ 
       |-- backend/ 
-          |-- backend.py    _python back-end script_
+          |-- backend.py    <em>python back-end script<em/>
           |-- api.spec      _configuration needed for PyInstaller_
       |-- electron/
           |-- main.js       _electronJS entry-point_
