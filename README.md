@@ -5,11 +5,23 @@ In this project, I use electronJS to build a simple desktop calculator app which
 ## Explanation of files: 
 
 <pre>
-   root 
-      |-- backend 
+   root/ 
+      |-- backend/ 
           |-- backend.py
-      |-- frontend
-          |-- src
+          |-- api.spec
+      |-- electron/
+          |-- main.js
+          |-- preload.js
+          |-- resources/
+      |-- frontend/
+          |-- public/
+          |-- src/
+          |-- package.json
+          |-- webpack.config.js
+          |-- .babelrc
+       |-- electron-builder.config.json
+       |-- package.json
+       |-- requirements.txt
 </pre>
 
   
