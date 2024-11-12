@@ -23,7 +23,7 @@ In this project, I use electronJS to build a simple desktop calculator app which
           |-- package.json
           |-- webpack.config.js
           |-- .babelrc
-       |-- electron-builder.config.json
+       |-- electron-builder.config.json      <em>Configuration for electron-builder</em>
        |-- package.json
        |-- requirements.txt      <em>Python packages to install (preferrably in a venv) </em> 
 </pre>
