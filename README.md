@@ -19,13 +19,13 @@ In this project, I use electronJS to build a simple desktop calculator app which
           |-- src/
               |-- App.jsx      <em>React front-end script</em>
               |-- index.js
-              |-- style.css
+              |-- style.css    
           |-- package.json
           |-- webpack.config.js
           |-- .babelrc
        |-- electron-builder.config.json
        |-- package.json
-       |-- requirements.txt
+       |-- requirements.txt      <em>Python packages to install (preferrably in a venv) </em> 
 </pre>
 
   
