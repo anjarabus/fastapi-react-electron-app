@@ -4,9 +4,12 @@ In this project, I use electronJS to build a simple desktop calculator app which
 
 ## Explanation of files: 
 
- * tree-md
- * dir2
-   * file21.ext
+root
+   |-- backend
+   |   |-- backend.py
+   |-- frontend
+   |   |-- src
+  
 
 
 ## How to run the app in development mode: 
