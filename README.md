@@ -7,15 +7,15 @@ In this project, I use electronJS to build a simple desktop calculator app which
 <pre>
    root/ 
       |-- backend/ 
-          |-- backend.py    <em>python back-end script</em>
-          |-- api.spec      <em>configuration needed for PyInstaller</em>
+          |-- backend.py    <em>Python back-end script</em>
+          |-- api.spec      <em>Configuration needed for PyInstaller</em>
       |-- electron/
-          |-- main.js       <em>electronJS entry-point</em>
+          |-- main.js       <em>ElectronJS entry-point</em>
           |-- preload.js   
           |-- resources/
       |-- frontend/
           |-- public/
-              |-- index.html   <em>frontend entry-point in dev mode</em>
+              |-- index.html   <em>Front-end entry-point in dev mode</em>
           |-- src/
               |-- App.jsx      <em>React front-end script</em>
               |-- index.js
