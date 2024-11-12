@@ -38,7 +38,7 @@ In this project, I use electronJS to build a simple desktop calculator app which
    npm run build
    ```
    
-3. Use PyInstaller to compile Python back-end into a standalone executable:<br/>
+3. Use PyInstaller to bundle Python back-end (scripts + dependencies) into a standalone executable:<br/>
 Activate `desktop_env` with
 ```
    source desktop_env/bin/activate
@@ -47,14 +47,16 @@ Activate `desktop_env` with
  ```
  pip install pyinstaller
 ```
+Bundle back-end from `root` directory:
 ```
    cd ..
    npm run py-build
 ```
    
 5. Build the Electron app:<br/>
-
-   `npm run electron-build`
+```
+   npm run electron-build
+```
 
 ## Things to watch out for: 
 
