@@ -8,6 +8,9 @@ In this project, I use electronJS to build a desktop app which has a simple Reac
 1. Build the React front-end:<br/> 
    `cd frontend/`<br/> 
    `npm run build`
-3. 
+3. Use PyInstaller to compile Python back-end into a standalone executable:<br/>
+   `cd ..`(back to root directory) <br/>
+   `npm run py-build`
+5. 
 
 
