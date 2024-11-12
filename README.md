@@ -35,7 +35,7 @@ In this project, I use electronJS to build a simple desktop calculator app which
 
 1. Make and activate a `venv`, then install requirements: <br/>
 ```
-   python -m venv desktop_env <br/>
+   python -m venv desktop_env
    source desktop_env/bin/activate
    pip install -r requirements.txt
 ```
