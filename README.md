@@ -12,10 +12,11 @@ In this project, I use electronJS to build a simple desktop calculator app which
       |-- electron/
           |-- main.js       <em>ElectronJS entry-point</em>
           |-- preload.js   
-          |-- resources/
+          |-- resources/   <em>Contains the app logo in .icns format for MacOS (change to.ico for Windows) </em>
       |-- frontend/
           |-- public/
               |-- index.html   <em>Front-end entry-point in dev mode</em>
+               ...             <em>Any images (svg) used in the front-end</em>
           |-- src/
               |-- App.jsx      <em>React front-end script</em>
               |-- index.js
