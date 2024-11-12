@@ -11,8 +11,11 @@ In this project, I use electronJS to build a simple desktop calculator app which
    `python -m venv desktop_env` <br/>
    `source desktop_env/bin/activate` <br/>
    `pip install -r requirements.txt`
+
+2. Make sure app is in development mode by changing `isDev=false > isDev=true` in `electron/main.js`<br/>
+   (Only because `electron-is-dev` package was not working correctly for me so I resorted to changing `isDev` manually.)
    
-3. Start the React front-end:<br/>
+4. Start the React front-end:<br/>
 
    `cd frontend`<br/>
    `npm start`<br/>
