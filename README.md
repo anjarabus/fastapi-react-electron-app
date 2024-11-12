@@ -10,6 +10,7 @@ In this project, I use electronJS to build a simple desktop calculator app which
    `python -m venv desktop_env` <br/>
    `source desktop_env/bin/activate` <br/>
    `pip install -r requirements.txt`
+   
 3. Start the React front-end:<br/>
    `cd frontend`<br/>
    `npm start`<br/>
