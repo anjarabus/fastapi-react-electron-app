@@ -35,7 +35,7 @@ In this project, I use electronJS to build a simple desktop calculator app which
 
 ## How to run the app in development mode: 
 
-1. Make and activate a `venv`, then install requirements: <br/>
+1. Make and activate a python `venv`, then install requirements: <br/>
 ```
    python -m venv desktop_env
    source desktop_env/bin/activate
