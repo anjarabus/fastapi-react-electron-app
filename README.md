@@ -82,7 +82,7 @@ Bundle back-end from `root` directory:
    cd ..
    npm run py-build
 ```
-Should create folders `backend/dist` and `backend/build`
+Should create folders `backend/dist/` and `backend/build/`
 
 4. Make sure app is in production mode by changing `isDev=true` to `isDev=false` in `electron/main.js`<br/>
 
@@ -91,7 +91,8 @@ Should create folders `backend/dist` and `backend/build`
 ```
    npm run electron-build
 ```
-Should create folder `dist/`
+Should create folder `dist/` <br/>
+Executable is in `dist/mac-arm64`
 
 ## Things to watch out for: 
 
