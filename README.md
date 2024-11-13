@@ -73,10 +73,6 @@ Activate `desktop_env` with
 ```
    source desktop_env/bin/activate
 ```
- OR install pyinstaller globally using
- ```
- pip install pyinstaller
-```
 Bundle back-end from `root` directory:
 ```
    cd ..
