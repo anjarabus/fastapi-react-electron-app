@@ -11,32 +11,32 @@ const execFile = require("child_process").execFile;
 const app_instance = app.requestSingleInstanceLock();
 
 let pythonExecutable;
+let pythonProcess;
 
 if (isDev) {
   pythonExecutable = "/opt/miniconda3/bin/python"; //Dev mode: load python from local
   console.log(`Using Python executable: ${pythonExecutable}`);
+  pythonProcess = spawn(pythonExecutable, [
+    path.join(__dirname, "../backend/backend.py"),
+  ]);
 } else {
   pythonExecutable = path.join(__dirname, "../backend/dist/api", "api"); //Prod mode: load python bundle created with pyinstaller
   console.log(`Using Python executable: ${pythonExecutable}`);
+  pythonProcess = spawn(pythonExecutable, []);
+  // Log the stdout to the console
+  pythonProcess.stdout.on("data", (data) => {
+    console.log(`stdout: ${data.toString()}`);
+  });
+
+  // Log stderr (this will show any errors from the Python process)
+  pythonProcess.stderr.on("data", (data) => {
+    console.error(`stderr: ${data.toString()}`);
+  });
+
+  pythonProcess.on("close", (code) => {
+    console.log(`Python process exited with code ${code}`);
+  });
 }
-
-const pythonProcess = spawn(pythonExecutable, [
-  path.join(__dirname, "../backend/backend.py"),
-]);
-
-// Log the stdout to the console
-pythonProcess.stdout.on("data", (data) => {
-  console.log(`stdout: ${data.toString()}`);
-});
-
-// Log stderr (this will show any errors from the Python process)
-pythonProcess.stderr.on("data", (data) => {
-  console.error(`stderr: ${data.toString()}`);
-});
-
-pythonProcess.on("close", (code) => {
-  console.log(`Python process exited with code ${code}`);
-});
 
 function createWindow() {
   const mainWindow = new BrowserWindow({
