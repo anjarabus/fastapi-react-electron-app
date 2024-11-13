@@ -92,7 +92,7 @@ Should create folders `backend/dist/` and `backend/build/`
    npm run electron-build
 ```
 Should create folder `dist/` <br/>
-Executable is in `dist/mac-arm64/`
+To launch app, navigate to `dist/mac-arm64/calculator-app` and click!
 
 ## Things to watch out for: 
 
