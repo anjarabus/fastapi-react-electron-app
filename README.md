@@ -92,7 +92,7 @@ Should create folders `backend/dist/` and `backend/build/`
    npm run electron-build
 ```
 Should create folder `dist/` <br/>
-Executable is in `dist/mac-arm64`
+Executable is in `dist/mac-arm64/`
 
 ## Things to watch out for: 
 
