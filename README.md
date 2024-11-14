@@ -70,7 +70,7 @@ You can adapt this project to your own needs by modifying `backend/backend.py` a
    ```
    Should create folder `frontend/build/`.
    
-3. Use PyInstaller to bundle Python back-end (scripts + dependencies) into a standalone executable:<br/>
+2. Use PyInstaller to bundle Python back-end (scripts + dependencies) into a standalone executable:<br/>
 
    Activate `desktop_env` (I believe, but am not totally certain, that PyInstaller must be called from an environment where all dependencies to be included in the bundle are installed):
    ```
@@ -83,10 +83,10 @@ You can adapt this project to your own needs by modifying `backend/backend.py` a
    ```
    Should create folders `backend/dist/` and `backend/build/`.
 
-4. Make sure app is in production mode by changing `isDev=true` to `isDev=false` in `electron/main.js`.<br/>
+3. Make sure app is in production mode by changing `isDev=true` to `isDev=false` in `electron/main.js`.<br/>
 
 
-5. Build the Electron app:<br/>
+4. Build the Electron app:<br/>
    ```
    npm run electron-build
    ```
