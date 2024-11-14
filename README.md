@@ -36,26 +36,26 @@ In this project, I use electronJS to build a simple desktop calculator app which
 ## How to run the app in development mode: 
 
 1. Make and activate a python `venv`, then install requirements: <br/>
-```
+   ```
    python -m venv desktop_env
    source desktop_env/bin/activate
    pip install -r requirements.txt
-```
+   ```
 
 2. Make sure app is in development mode by changing `isDev=false` to `isDev=true` in `electron/main.js`<br/>
    (Only because `electron-is-dev` package was not working correctly for me so I resorted to changing `isDev` manually.)
    
 4. Start the React front-end from `frontend/` directory:<br/>
-```
+   ```
    cd frontend
    npm start
-```
+   ```
    
 5. Start the Python back-end from `root` directory:
-```
+   ```
    cd ..
    npm run electron-dev
-```
+   ```
    
 
 ## Steps to build and execute app in production mode: 
@@ -69,16 +69,16 @@ In this project, I use electronJS to build a simple desktop calculator app which
    Should create folder `frontend/build/`
    
 3. Use PyInstaller to bundle Python back-end (scripts + dependencies) into a standalone executable:<br/>
-Activate `desktop_env` with
-```
+   Activate `desktop_env` with
+   ```
    source desktop_env/bin/activate
-```
-Bundle back-end from `root` directory:
-```
+   ```
+   Bundle back-end from `root` directory:
+   ```
    cd ..
    npm run py-build
-```
-Should create folders `backend/dist/` and `backend/build/`
+   ```
+   Should create folders `backend/dist/` and `backend/build/`
 
 4. Make sure app is in production mode by changing `isDev=true` to `isDev=false` in `electron/main.js`<br/>
 
