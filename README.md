@@ -96,5 +96,7 @@ You can adapt this project to your own needs by modifying `backend/backend.py` a
 ## Things to watch out for: 
 
 1. PyInstaller is tested on MacOS, Windows and Linux, but cannot cross-compile. If you want to make a Windows app, you need to build the app on Windows.
+   
 2. Currently `asar: false` is set in `electron-builder.config.js`. To build with asar, you might need to spend some time figuring out how to unpack the scripts you need to call from main.js.
+
 3. If you get an error that says something like `ENODIR ... symLink ... Contents/Versions/Python` (I don't remember the exact wording) when running `npm run electron-build`, try downgrading your version of electron-builder (some people say downgrading to `"electron-builder": ^23.0.0` worked for them). 
