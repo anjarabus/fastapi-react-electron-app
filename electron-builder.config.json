@@ -18,6 +18,6 @@
     "output": "dist"
   },
 
-  "asar": false,
-  "extends": null
+  "asar": true,
+  "asarUnpack": ["backend/*"]
 }

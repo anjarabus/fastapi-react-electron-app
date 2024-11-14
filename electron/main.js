@@ -20,7 +20,14 @@ if (isDev) {
     path.join(__dirname, "../backend/backend.py"),
   ]);
 } else {
-  pythonExecutable = path.join(__dirname, "../backend/dist/api", "api"); //Prod mode: load python bundle created with pyinstaller
+  //pythonExecutable = path.join(__dirname, "../backend/dist/api", "api"); //Prod mode: load python bundle created with pyinstaller
+  pythonExecutable = path.join(
+    app.getAppPath(),
+    "backend",
+    "dist",
+    "api",
+    "api"
+  ); // use when asar:false in electron-builder.config.json
   console.log(`Using Python executable: ${pythonExecutable}`);
   pythonProcess = spawn(pythonExecutable, []);
   // Log the stdout to the console
@@ -50,13 +57,17 @@ function createWindow() {
   // // and load the index.html of the app.
   // mainWindow.loadFile(INDEX_PATH);
 
+  mainWindow.webContents.openDevTools();
+
   if (isDev) {
     mainWindow.loadURL("http://localhost:8080"); // Dev mode: Load React app from Webpack Dev Server
-    mainWindow.webContents.openDevTools();
   } else {
+    // mainWindow.loadFile(
+    //   path.join(__dirname, "../frontend/build", "index.html")
+    // ); // Prod mode: Load from production build
     mainWindow.loadFile(
-      path.join(__dirname, "../frontend/build", "index.html")
-    ); // Prod mode: Load from production build
+      path.join(app.getAppPath(), "frontend", "build", "index.html")
+    ); //use when asar:false
   }
 
   // only one instance exists
