@@ -5,4 +5,4 @@ desktop_env/
 backend/build/
 backend/dist/
 dist/
-
+__pycache__/
