@@ -61,7 +61,7 @@ You can adapt this project to your own needs by modifying `backend/backend.py` a
    
 
 ## Steps to build and execute app in production mode: 
-#(MacOS only: for windows you will need to make some changes to your configuration first)
+### (MacOS only: for windows you will need to make some changes to your configuration first)
 
 1. Build the React front-end:<br/>
    ```
