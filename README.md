@@ -93,4 +93,4 @@ In this project, I use electronJS to build a simple desktop calculator app which
 ## Things to watch out for: 
 
 1. PyInstaller is tested on MacOS, Windows and Linux, but cannot cross-compile. If you want to make a Windows app, you need to build the app on Windows.
-2. Currently `asar: false` is set in `electron-builder.config.js`
+2. Currently `asar: false` is set in `electron-builder.config.js`. To build with asar, you might need to spend some time figuring out how to unpack the scripts you need to call from main.js.  
