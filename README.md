@@ -2,7 +2,7 @@
 
 In this project, I use electronJS to build a simple desktop calculator app which has a React front-end and Python (FastAPI) back-end. The python back-end (script `backend/backend.py` and dependencies in `requirements.txt`) is bundled into a standalone executable using PyInstaller. This is a very powerful tool as it allows people who do not have python installed on their machines to use your app!
 
-You can adapt this project to your own needs by modifying `backend/backend.py` and `frontend/src/App.jsx` and the relevant configuration files. For example, you can use this framework to convert an exisiting web application to a desktop application --- `electron/main.js` will spawn the python back-end, make a desktop app window, and load `frontend/public/index.html` into the desktop window instead of the browser window. 
+You can adapt this project to your own needs by modifying `backend/backend.py` and `frontend/src/App.jsx` and the relevant configuration files. For example, you can use this framework to convert an exisiting web application to a desktop application --- `electron/main.js` will spawn the python back-end, make a desktop window, and load `frontend/public/index.html` into the desktop window instead of a browser window. 
 
 ## Explanation of files: 
 
