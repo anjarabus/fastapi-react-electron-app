@@ -6,3 +6,5 @@ backend/build/
 backend/dist/
 dist/
 __pycache__/
+.DS_Store
+frontend/.DS_Store
