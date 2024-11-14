@@ -44,7 +44,7 @@ You can adapt this project to your own needs by modifying `backend/backend.py` a
    pip install -r requirements.txt
    ```
 
-2. Make sure app is in development mode by changing `isDev=false` to `isDev=true` in `electron/main.js`<br/>.
+2. Make sure app is in development mode by changing `isDev=false` to `isDev=true` in `electron/main.js`.<br/>
    (Only because `electron-is-dev` package was not working correctly for me so I resorted to changing `isDev` manually.)
    
 4. Start the React front-end from `frontend/` directory:<br/>
