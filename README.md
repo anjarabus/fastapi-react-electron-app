@@ -83,7 +83,7 @@ You can adapt this project to your own needs by modifying `backend/backend.py` a
    ```
    Should create folders `backend/dist/` and `backend/build/`.
 
-4. Make sure app is in production mode by changing `isDev=true` to `isDev=false` in `electron/main.js`<br/>.
+4. Make sure app is in production mode by changing `isDev=true` to `isDev=false` in `electron/main.js`.<br/>
 
 
 5. Build the Electron app:<br/>
