@@ -20,7 +20,7 @@ app.add_middleware(
 )
 
 @app.get("/op/{number1}/{number2}")
-def operations(number1: int, number2: int):
+def operations(number1: float, number2: float):
     divide_result = "NaN"
 
     if number2 != 0:
