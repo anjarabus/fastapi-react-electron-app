@@ -54,13 +54,9 @@ function createWindow() {
     },
   });
 
-  // // and load the index.html of the app.
-  // mainWindow.loadFile(INDEX_PATH);
-
-  mainWindow.webContents.openDevTools();
-
   if (isDev) {
     mainWindow.loadURL("http://localhost:8080"); // Dev mode: Load React app from Webpack Dev Server
+    mainWindow.webContents.openDevTools();
   } else {
     // mainWindow.loadFile(
     //   path.join(__dirname, "../frontend/build", "index.html")
@@ -107,7 +103,8 @@ app.on("before-quit", () => {
       console.log("Python process not running.");
     }
   } else {
-    execFile().kill("SIGINT");
+    console.log("Killing Python process...");
+    pythonProcess.kill();
   }
 });
 
