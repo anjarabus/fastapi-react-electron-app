@@ -72,7 +72,7 @@ You can adapt this project to your own needs by modifying `backend/backend.py` a
    
 3. Use PyInstaller to bundle Python back-end (scripts + dependencies) into a standalone executable:<br/>
 
-   Activate `desktop_env` (I believe, but am not totally certain, that you have to run PyInstaller with all dependencies installed):
+   Activate `desktop_env` (I believe, but am not totally certain, that you have to run PyInstaller from an environment with all dependencies installed):
    ```
    source desktop_env/bin/activate
    ```
