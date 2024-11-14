@@ -4,7 +4,7 @@ In this project, I use electronJS to build a simple desktop calculator app which
 
 You can adapt this project to your own needs by modifying `backend/backend.py` and `frontend/src/App.jsx` and the relevant configuration files. For example, you can use this framework to convert an exisiting web application to a desktop application --- `electron/main.js` will spawn the python back-end, make a desktop window, and load `frontend/public/index.html` into the desktop window instead of a browser window.
 
-Or...you can just have fun using my "Weasel Calculator" (and don't ask)....
+Or...you can just have fun using my "Weasel Calculator" (and don't ask LOL)....
 
 https://github.com/user-attachments/assets/00d8ff8d-4e73-43a9-beba-230608d32efa
 
