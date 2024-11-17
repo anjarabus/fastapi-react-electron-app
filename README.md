@@ -50,6 +50,7 @@ https://github.com/user-attachments/assets/00d8ff8d-4e73-43a9-beba-230608d32efa
 
 2. Make sure app is in development mode by changing `isDev=false` to `isDev=true` in `electron/main.js`.<br/>
    (Only because `electron-is-dev` package was not working correctly for me so I resorted to changing `isDev` manually.)
+   Additionally, ensure `pythonExecutable` in `main.js` is set to the correct loaction on your computer.
    
 4. Start the React front-end from `frontend/` directory:<br/>
    ```
