@@ -104,5 +104,5 @@ https://github.com/user-attachments/assets/00d8ff8d-4e73-43a9-beba-230608d32efa
    
 2. Currently, `asar: false` is set in `electron-builder.config.js`. To build with asar, you might need to spend some time figuring out how to unpack the scripts you need to call from main.js.
 
-3. If you get an error that says something like `ENODIR ... symLink ... Contents/Versions/Python` (I don't remember the exact wording) when running `npm run electron-build`, try downgrading your version of electron-builder (some people say downgrading to `"electron-builder": ^23.0.0` worked for them).
+3. If you get an error that says something like `ENODIR ... ensureSymlink ... Contents/Versions/Python` (I don't remember the exact wording) when running `npm run electron-build`, try downgrading your version of electron-builder (some people say downgrading to `"electron-builder": ^23.0.0` worked for them).
 
