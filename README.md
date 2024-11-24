@@ -50,7 +50,7 @@ https://github.com/user-attachments/assets/00d8ff8d-4e73-43a9-beba-230608d32efa
 
 2. Make sure app is in development mode by changing `isDev=false` to `isDev=true` in `electron/main.js`.<br/>
    (Only because `electron-is-dev` package was not working correctly for me so I resorted to changing `isDev` manually.)
-   Additionally, ensure `pythonExecutable` in `main.js` is set to the correct loaction on your computer.
+   Additionally, ensure `pythonExecutable` in `main.js` is set to the correct location on your computer.
    
 4. Start the React front-end from `frontend/` directory:<br/>
    ```
@@ -88,7 +88,7 @@ https://github.com/user-attachments/assets/00d8ff8d-4e73-43a9-beba-230608d32efa
    ```
    Should create folders `backend/dist/` and `backend/build/`.
 
-3. Make sure app is in production mode by changing `isDev=true` to `isDev=false` in `electron/main.js`.<br/>
+3. Make sure app is in production mode by changing `isDev=true` to `isDev=false` in `electron/main.js`.<br/> 
 
 
 4. Build the Electron app:<br/>
@@ -100,8 +100,9 @@ https://github.com/user-attachments/assets/00d8ff8d-4e73-43a9-beba-230608d32efa
 
 ## Things to watch out for: 
 
-1. PyInstaller is tested on MacOS, Windows and Linux, but cannot cross-compile. If you want to make a Windows app, you need to build the app on Windows.
+1. PyInstaller is tested on MacOS, Windows and Linux, but cannot cross-compile. If you want to make a Windows app, you need to build the app on Windows. Additionally, PyInstaller seems to be quite version-specific: If you test the app on a Mac with an OS older than the one used to build the app, the Python back-end may not work (this was my experience, and upgrading the OS fixed the issue). 
    
 2. Currently, `asar: false` is set in `electron-builder.config.js`. To build with asar, you might need to spend some time figuring out how to unpack the scripts you need to call from main.js.
 
-3. If you get an error that says something like `ENODIR ... symLink ... Contents/Versions/Python` (I don't remember the exact wording) when running `npm run electron-build`, try downgrading your version of electron-builder (some people say downgrading to `"electron-builder": ^23.0.0` worked for them). 
+3. If you get an error that says something like `ENODIR ... symLink ... Contents/Versions/Python` (I don't remember the exact wording) when running `npm run electron-build`, try downgrading your version of electron-builder (some people say downgrading to `"electron-builder": ^23.0.0` worked for them).
+
